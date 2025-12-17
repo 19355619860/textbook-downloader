@@ -14,12 +14,14 @@ The main interface of Textbook Downloader, providing a clean and user-friendly e
 ### Search Textbooks
 Easily search for electronic textbooks and academic ebooks.
 
-![Search Textbooks](images/search.png)
+![Search Textbooks](images/search.jpg)
+![Search Textbooks](images/search1.jpg)
+![Search Textbooks](images/search2.jpg)
 
 ### Download Textbooks
 Fast and stable textbook downloading experience.
 
-![Download Textbooks](images/download.png)
+![Download Textbooks](images/download.jpg)
 
 ## Disclaimer
 This project is for educational purposes only.
