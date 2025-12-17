@@ -2,6 +2,7 @@
 Base source class for different textbook sources.
 """
 
+import os
 from abc import ABC, abstractmethod
 from typing import Dict, Optional, List
 
@@ -63,7 +64,6 @@ class LibraryGenesisSource(BaseSource):
     def download(self, url: str, output_path: str) -> bool:
         """Download from Library Genesis."""
         # Placeholder implementation
-        import os
         # In a real implementation, this would download the file
         # For now, just create a placeholder file
         with open(output_path, 'w') as f:
@@ -94,7 +94,6 @@ class OpenLibrarySource(BaseSource):
     def download(self, url: str, output_path: str) -> bool:
         """Download from Open Library."""
         # Placeholder implementation
-        import os
         with open(output_path, 'w') as f:
             f.write(f"Downloaded from Open Library: {url}\n")
         return os.path.exists(output_path)
@@ -123,7 +122,6 @@ class ProjectGutenbergSource(BaseSource):
     def download(self, url: str, output_path: str) -> bool:
         """Download from Project Gutenberg."""
         # Placeholder implementation
-        import os
         with open(output_path, 'w') as f:
             f.write(f"Downloaded from Project Gutenberg: {url}\n")
         return os.path.exists(output_path)

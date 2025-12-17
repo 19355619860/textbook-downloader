@@ -4,6 +4,7 @@ Main downloader class for managing textbook downloads.
 
 import os
 from typing import List, Dict, Optional
+from urllib.parse import urlparse
 from .sources import BaseSource, LibraryGenesisSource, OpenLibrarySource, ProjectGutenbergSource
 
 
@@ -91,13 +92,18 @@ class TextbookDownloader:
             return False
         else:
             # Try to auto-detect source from URL
+            parsed_url = urlparse(url)
+            hostname = parsed_url.hostname or ""
+            
             for source in self.sources:
-                if source.base_url in url:
+                source_hostname = urlparse(source.base_url).hostname or ""
+                if hostname == source_hostname:
                     return source.download(url, output_path)
             
-            # If no source detected, try the first source
-            print("Warning: Could not detect source, using default")
-            return self.sources[0].download(url, output_path)
+            # If no source detected, require explicit source specification
+            print(f"Error: Could not detect source from URL: {url}")
+            print("Please specify the source using --source parameter")
+            return False
 
     def get_source_info(self) -> Dict[str, Dict]:
         """
