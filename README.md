@@ -9,7 +9,7 @@ Textbook Downloader is an easy-to-use tool for fast access to electronic textboo
 ### Home Screen
 The main interface of Textbook Downloader, providing a clean and user-friendly entry point.
 
-![Home Screen](images/home.png)
+![Home Screen](images/home.jpg)
 
 ### Search Textbooks
 Easily search for electronic textbooks and academic ebooks.
