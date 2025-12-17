@@ -1,0 +1,25 @@
+# Example configuration for Textbook Downloader
+# Copy this file to config.ini and customize as needed
+
+[general]
+# Default output directory for downloads
+output_dir = ./downloads
+
+# Default format preference (pdf, epub, etc.)
+preferred_format = pdf
+
+[sources]
+# Enable/disable specific sources
+library_genesis = true
+open_library = true
+project_gutenberg = true
+
+[download]
+# Maximum concurrent downloads
+max_concurrent = 3
+
+# Timeout in seconds
+timeout = 30
+
+# User agent for requests
+user_agent = Textbook-Downloader/0.1.0
